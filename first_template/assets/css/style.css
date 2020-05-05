@@ -1,0 +1,65 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    font-family: Arial;
+    max-width: 1280px;
+}
+
+header{
+    position: relative;
+    background-color: #445161;
+    min-height: 323px;
+}
+
+h1{
+    
+    font-size: 59px;
+    font-weight: normal;
+}
+
+.header-text{
+    position: absolute;
+    margin: 4% 0  0 4%;
+    color: white;
+}
+
+.header-list{
+    font-size: 20px;
+    padding-top: 4%;
+    line-height: 1.8;
+    list-style-position:inside;
+    list-style-image: url(../images/check_icon.png);
+}
+
+.header-photo{
+    float: right;
+    padding: 4% 4% 1.8% 0;    
+}
+
+.about{
+    position: relative;
+    margin: 4% 0 0 0; 
+    min-height: 350px;
+}
+
+.about-text{
+    position: absolute;
+    padding: 0 45% 0 4%;
+    max-width: 670px;
+    line-height: 24px; 
+}
+
+.about-heading{
+    margin: 0 0 4% 0;
+    color: #445161;
+    max-width: 255px;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+
+
+.about-video{
+    float:right;
+    padding: 0 4% 1.8% 0;
+}
