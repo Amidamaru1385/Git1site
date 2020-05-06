@@ -12,7 +12,7 @@ header{
 }
 
 h1{
-    
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
     font-size: 59px;
     font-weight: normal;
 }
@@ -27,8 +27,7 @@ h1{
     font-size: 20px;
     padding-top: 4%;
     line-height: 1.8;
-    list-style-position:inside;
-    list-style-image: url(../images/check_icon.png);
+    list-style:url(../images/check-icon.png) inside;
 }
 
 .header-photo{
@@ -39,7 +38,7 @@ h1{
 .about{
     position: relative;
     margin: 4% 0 0 0; 
-    min-height: 350px;
+    min-height: 300px;
 }
 
 .about-text{
@@ -62,4 +61,84 @@ h1{
 .about-video{
     float:right;
     padding: 0 4% 1.8% 0;
+}
+
+.pluses{
+    background-color: #f5f5f5;
+    padding-bottom: 3%;
+}
+
+.pluses-heading{
+    padding: 4% 0 2% 0;
+    max-width: 370px;
+    color: #445161;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.pluses-list{
+    column-gap: 0.1%;
+    column-count: 2;
+    margin-left: 5%;
+    list-style-image: url(../images/plus-icon.png);
+    
+    
+}
+
+.pluses-list li{
+    margin: 0 0 2% 5%;
+    line-height: 24px;
+}
+
+.pluses-text{
+    position:relative;
+    top: -19px;
+    
+}
+
+.screenshots{
+    position: relative;
+}
+
+.screenshots-heading{
+    text-align: center;
+    padding: 4% 0 2% 0;
+    max-width: 370px;
+    color: #445161;
+    font-size: 30px;
+    font-weight: 400;
+    padding-bottom: 3%;
+}
+
+.screenshots-list{
+    margin: 0 0 0 5%;
+    list-style-type: none;
+    column-count: 2;
+    column-gap: 0.1%;
+}
+
+.screenshots-list li{
+    max-width: 575px;
+    margin: 0 1.5% 4% 0;
+    display: flex;
+    
+}
+
+.screenshots-title{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #445161;
+    margin-left: .1%;
+    margin-bottom: 4%;
+}
+
+.screenshots-text{
+    margin-left: 4%;
+}
+
+.screenshots-text>span{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
 }
