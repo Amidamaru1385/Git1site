@@ -5,6 +5,11 @@
     max-width: 1280px;
 }
 
+@font-face{
+    font-family: social;
+    src: url(../fonts/socialico.ttf);
+}
+
 header{
     position: relative;
     background-color: #445161;
@@ -98,16 +103,16 @@ h1{
 
 .screenshots{
     position: relative;
+    padding-bottom: 3%;
 }
 
 .screenshots-heading{
     text-align: center;
-    padding: 4% 0 2% 0;
+    padding: 4% 0 3% 0;
     max-width: 370px;
     color: #445161;
     font-size: 30px;
     font-weight: 400;
-    padding-bottom: 3%;
 }
 
 .screenshots-list{
@@ -141,4 +146,257 @@ h1{
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+}
+
+.reviews{
+    background: #f5f5f5;
+}
+
+.reviews-heading{
+    color: #445161;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 3%;
+}
+
+.reviews-list{
+    margin: 3% 0 0 0%;
+    column-count: 2;
+    column-gap: 0.1%;
+    list-style-type: none;
+
+}
+.reviews-list li{
+    display: flex;
+    
+}
+
+.speech-bubble {
+    background: #ebebeb;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    margin: 0 auto 40px;
+    max-width: 450px;
+    padding: 15px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    font-style: italic;
+    margin-right: 35px;
+    
+}
+
+.speech-bubble:before{
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: 65%;
+	left: -1.2em;
+	border: .75rem solid transparent;
+	border-top: none;
+	border-bottom-color: #ebebeb;
+	filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+    transform: rotate(270deg)
+}
+
+.speech-bubble-sign{
+    color: #989898;
+    font-size: 14px;
+    font-weight: 400;
+    padding-top: 1.5%;
+}
+
+.reviews-list img{
+    margin-left: 15px;
+}
+
+.buy-it-now{
+}
+
+.buy-it-now-heading{
+    color: #445161;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 3%;
+}
+
+.offers{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.offer{
+    background-color: #445162;
+    min-height: 300px;
+    min-width: 300px;
+    border-radius: 5px;
+    padding-bottom: 1%;
+}
+
+.offer-standart{
+    
+}
+.offer li{
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+.offer-name{
+    padding-bottom: 3%;
+    text-align: center;
+    padding-top: 4%;
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.privelege{  
+    padding: 5% 3% 0% 5%;
+}
+
+.privelege li{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;    
+    padding-bottom: 16px;
+}
+
+.price{
+    background-color: #fff;
+    border: 3px solid #445162;
+    font-size: 40px;
+    font-weight: 400;
+    color: #445162;
+    text-align: center;
+    min-height: 70px;
+    line-height: 70px;
+}
+
+.button-container{
+     padding: 0 0 2% 7%;
+}
+
+.buy-button{
+   
+	background-color:#fff;
+	border-radius:4px;
+	display:inline-block;
+	color:#445162;
+	font-size:18px;
+	font-weight:bold;
+	padding:7px 110px;
+    border: none;
+}
+
+address{
+    margin-top: 5%;
+    background-color: #445162;
+    padding-bottom: 4%;
+}
+
+.contacts-heading{
+    font-style: normal;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    padding: 3% 0 3% 0;
+}
+
+.contacts-content{
+    display: inline-flex;
+    margin-left: 18%;
+    
+}
+
+.contacts-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-name,
+.input-email{
+    width: 500px;
+    margin-bottom: 2%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.input-message{
+    width: 500px;
+    margin-bottom: 2%;
+    height: 170px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    resize: none;
+}
+
+.send-button{
+    background-color:#fff;
+	border-radius:4px;
+	display:inline-block;
+	color:#445162;
+	font-size:18px;
+	font-weight:bold;
+    margin-top: 3%;
+	padding:7px 40px;
+    border: none;
+    
+}
+
+.contact-numbers-list{
+    list-style-type: none;
+    color: #fff;
+    
+}
+
+.contacts-links{
+    margin-left: 7%;
+    min-width: 500px;
+}
+
+.contacts-links li{
+    padding-bottom: 20px;
+}
+
+.contacts-numbers-text{
+    position:relative;
+    top: -6px;
+    left: 5px;
+    
+}
+
+.social-links{
+    list-style-type: none;
+    display: inline-flex;
+    color: #fff;
+    font-family: social;
+}
+
+.social-links li p{
+    font-family: social;
+    font-size: 60px;
+    font-style: normal;
+}
+
+.social-links a{
+    text-decoration: none;
+    color: #fff;
+
+}
+
+footer p{
+    text-align: center;
+    font-size: 12px;
+    margin: .4%;
+    color: #445162;
 }
