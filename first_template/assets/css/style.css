@@ -400,3 +400,12 @@ footer p{
     margin: .4%;
     color: #445162;
 }
+
+button:focus{
+    outline: none;
+}
+
+button:active{
+    transform: translateY(1px);
+    filter: saturate(150%);
+}
