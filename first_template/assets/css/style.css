@@ -1,8 +1,6 @@
 * {
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
-    font-family: Arial;
-    max-width: 1280px;
 }
 
 @font-face{
@@ -10,10 +8,20 @@
     src: url(../fonts/socialico.ttf);
 }
 
+body{
+    background: #ccc;
+}
+
+.container{
+    font-family: Arial;
+    max-width: 1280px;
+    margin: 0 auto;
+    background: #fff;
+}
+
 header{
-    position: relative;
     background-color: #445161;
-    min-height: 323px;
+    display:block;
 }
 
 h1{
@@ -22,22 +30,32 @@ h1{
     font-weight: normal;
 }
 
+.header-content{
+    padding: 50px;
+    
+}
+
+.header-content::after{
+    content: '';
+    clear: both;
+    display: block;
+
+}
+
 .header-text{
-    position: absolute;
-    margin: 4% 0  0 4%;
+    float:left;
     color: white;
 }
 
 .header-list{
+    margin-top: 5%;;
     font-size: 20px;
-    padding-top: 4%;
     line-height: 1.8;
     list-style:url(../images/check-icon.png) inside;
 }
 
 .header-photo{
-    float: right;
-    padding: 4% 4% 1.8% 0;    
+    float: right; 
 }
 
 .about{
@@ -79,6 +97,7 @@ h1{
     color: #445161;
     font-size: 30px;
     font-weight: 400;
+    margin: 0 auto;
 }
 
 .pluses-list{
@@ -102,8 +121,14 @@ h1{
 }
 
 .screenshots{
-    position: relative;
+    
     padding-bottom: 3%;
+}
+
+.screenshots:after{
+    content: '';
+    clear: both;
+    display: block;
 }
 
 .screenshots-heading{
@@ -113,12 +138,15 @@ h1{
     color: #445161;
     font-size: 30px;
     font-weight: 400;
+    margin: 0 auto;
 }
+
 
 .screenshots-list{
     margin: 0 0 0 5%;
     list-style-type: none;
     column-count: 2;
+   
     column-gap: 0.1%;
 }
 
@@ -126,8 +154,9 @@ h1{
     max-width: 575px;
     margin: 0 1.5% 4% 0;
     display: flex;
-    
+    float: left;
 }
+
 
 .screenshots-title{
     font-size: 24px;
@@ -214,8 +243,7 @@ h1{
     margin-left: 15px;
 }
 
-.buy-it-now{
-}
+
 
 .buy-it-now-heading{
     color: #445161;
@@ -227,7 +255,7 @@ h1{
 
 .offers{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-end;
 }
 
@@ -239,9 +267,7 @@ h1{
     padding-bottom: 1%;
 }
 
-.offer-standart{
-    
-}
+
 .offer li{
     list-style-type: decimal;
     list-style-position: inside;
