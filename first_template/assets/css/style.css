@@ -14,8 +14,8 @@ body{
 
 .container{
     font-family: Arial;
-    max-width: 1280px;
     margin: 0 auto;
+    max-width: 1280px;
     background: #fff;
 }
 
@@ -101,14 +101,10 @@ h1{
 .pluses-list{
     margin-left: 8%;
     list-style-image: url(../images/plus-icon.png);
-    
-    
 }
 
-
-
 .pluses-list li{
-    width: calc(45%);
+    width: 45%;
     float: left;
     margin: 0 0 2% 0%;
     line-height: 24px;
@@ -123,19 +119,12 @@ h1{
 .pluses-text{
     position:relative;
     top: -19px;
-    
 }
 
 .screenshots{
-    
     padding-bottom: 3%;
 }
 
-.screenshots:after{
-    content: '';
-    clear: both;
-    display: block;
-}
 
 .screenshots-heading{
     text-align: center;
@@ -389,7 +378,10 @@ address{
     margin-top: 3%;
 	padding:7px 40px;
     border: none;
-    
+}
+
+.send-button-box{
+    margin-left: 190px;
 }
 
 .contact-numbers-list{
@@ -447,4 +439,131 @@ button:focus{
 button:active{
     transform: translateY(1px);
     filter: saturate(150%);
+}
+
+@media screen and (max-width: 1043px) {
+    .container{  
+        max-width: 762px;   
+    }
+
+    .header-photo{
+        margin-top: 250px;
+        float:none;
+
+    }
+
+    .about-video{
+        float:none;
+        padding-top: 235px;
+    }
+    
+    .pluses-list li{
+        width: 80%;
+        margin-left: 50px;
+    }
+    .pluses-list li:nth-child(even){
+        margin-left: 50px;
+    }
+    .offer{
+        min-width:150px;
+        margin-bottom: 15px;
+    }
+    .offers{
+        flex-direction: column;
+        align-items: center; 
+    }
+    .offer:first-child{
+        margin-left: inherit;
+        margin-top: 35px;
+    }
+    
+    .offer:last-child{
+        margin-right: inherit;
+    }
+    .button-container{
+        padding-right: 37px;
+    }
+    .contacts-content{
+        display: block;
+    }
+
+    .contacts-links{
+        margin-top: 40px;
+        margin-left: 130px
+    }
+}
+
+@media screen and (max-width:600px){
+    .container{  
+        max-width: 600px;
+        min-width: 320px;   
+    }
+
+    .header-content{
+        padding:4%;
+    }
+
+    .header-photo{
+        margin: 0;
+    }
+
+    .header-photo img{
+        width:250px;
+    }
+
+    .about-video img{
+        width:250px;
+    }
+    
+    .pluses-heading{
+        padding-left: 4%;
+    }
+
+    .pluses-list {
+        margin-left: 1%;
+    }
+
+    .screenshots-list li{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .screenshots-text{
+        margin:0;
+    }
+
+    .screenshots-list li img{
+        height:150px;
+        float:left;
+    }
+
+    .reviews-list li {
+        margin-left: 5px;
+    }
+    
+    .speech-bubble:before{
+        bottom: 85%;
+        left: -1.2em;
+        
+    }
+
+    .input-name,
+    .input-email{
+        width: auto;
+    }
+
+    .input-message{
+        width: auto;
+    }
+
+    .contacts-form{
+        padding-right: 30px;
+    }
+
+    .send-button-box{
+        margin-left: 50px;
+    }
+
+    .contacts-links{
+        margin-left: 20px;
+    }
 }
