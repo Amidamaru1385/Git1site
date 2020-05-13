@@ -42,9 +42,11 @@
                         debitis dolor.
                     </p>
                 </div>
+                
                 <div class="about-video">
-                    <img src="assets/images/about-dummy.jpg" alt="video">
+                    <video class="video" src="assets/videos/video.mp4"></video>
                 </div>
+
             </section>
 
             <section class="pluses clear-fix">
@@ -100,7 +102,7 @@
                     </li>
                 </ul>
             </section>
-            
+
             <section class="screenshots clear-fix">
                 <h2 class="screenshots-heading">Screenshots</h2>
                 <ul class="screenshots-list">
@@ -251,10 +253,14 @@
                 <p class="contacts-heading">Contacts</p>
                 <div class="contacts-content">
                     <div class="contacts-form">
-                        <input class="input-name" type="text" placeholder="Your name:">
-                        <input class="input-email" type="email" placeholder="Your email:">
-                        <textarea class="input-message" placeholder="Your message:"></textarea>
-                        <div class="send-button-box"><button class="send-button">SEND</button></div>
+                        <form action="">
+                            <input class="input-name" type="text" placeholder="Your name:" pattern="^([А-Я][а-я]+)$">
+                            <input class="input-email" type="email" placeholder="Your email:" pattern="^([\w\-]+[@][A-Za-z0-9]+[\.][A-Za-z]{2,3})$">
+                            <textarea class="input-message" placeholder="Your message:"></textarea>
+                            <div class="send-button-box"><input type="submit" value="SEND" class="send-button"></input>
+                            </div>
+                        <form action="">
+
                     </div>
                     <div class="contacts-links">
                         <div class="contact-numbers">
