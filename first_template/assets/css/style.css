@@ -576,3 +576,53 @@ button:active{
         margin-left: 20px;
     }
 }
+.ad-body {
+    margin: 0;
+    background: #e67e9e;
+    min-height: 100vh;
+    position: relative;
+}
+
+.ad-body video {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+.on-video{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ad-wrap{
+    width: 60%;
+}
+
+.ad-wrap p {
+    font-family: 'Russo One', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color: #4CAF50;
+    
+}
+
+.ad-button {
+    margin: 0 auto;
+    display: block;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+.ad-wrap a {
+    text-decoration: none;
+}
