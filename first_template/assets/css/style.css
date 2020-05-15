@@ -504,8 +504,7 @@ button:active{
 
 @media screen and (max-width:600px){
     .container{  
-        max-width: 600px;
-        min-width: 320px;   
+        width:198%;  
     }
 
     .header-content{
@@ -517,11 +516,12 @@ button:active{
     }
 
     .header-photo img{
-        width:250px;
+        margin-top: 15px;
+        width:550px;
     }
 
     .about-video video{
-        width:250px;
+        width:550px;
     }
     
     .pluses-heading{
