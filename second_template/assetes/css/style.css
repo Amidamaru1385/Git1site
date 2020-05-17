@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@font-face{
+    font-family: "Open Sans";
+
+    src:url("../fonts/OpenSans-Regular.ttf");
+}
+
+.container{
+    font-family: "Open Sans", "sans-serif";
+    margin: 0 auto;
+    max-width:1600px;
+    display:grid;
+    grid-template-areas: 
+    "header-main"
+    "cutaway"
+    "pluses"
+    "choose-us"
+    "stats"
+    "how-work"
+    "gallery"
+    "our-team"
+    "new-patient"
+    "footer-main"
+    ;
+}
+
+.header-main{
+    grid-area: header-main;
+    display:grid;
+    padding: 2%  13%;
+}
+
+.header-up{
+    display:grid;
+    border-bottom: 2px solid rgba(194, 194, 194, 0.31);
+    padding-bottom: 10px;
+    grid-template-columns: 30% 3fr 3fr 2fr;
+}
+
+.logo{
+    display:block;
+}
+
+.fa-circle{
+    color:#1a9bdc;
+}
+
+.work-time,
+.mail-us,
+.call-us{
+    display:flex;
+    justify-content: center;
+}
+
+.work-time-text{
+    padding-left: 3px;
+    font-size: 15px;
+    color: #6a6a6a;
+    font-weight: 700;
+    line-height: 22px;
+    padding-top: 9px;
+}
+
+.work-time-bottom-text{
+    font-weight: 400;
+}
+
+
+
+
+.cutaway{
+    grid-area: cutaway;
+}
+
+.pluses{
+    grid-area: pluses ;
+}
+
+.choose-us{
+    grid-area: choose-us ;
+}
+
+.stats{
+    grid-area: stats ;
+}
+
+.how-work{
+    grid-area: how-work ;
+}
+
+.gallery{
+    grid-area: gallery ;
+}
+
+.our-team{
+    grid-area: our-team ;
+}
+
+.new-patient{
+    grid-area: new-patient ;
+}
+
+.footer-main{
+    grid-area: footer-main ;
+}
