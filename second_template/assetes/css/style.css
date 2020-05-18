@@ -5,8 +5,17 @@
 
 @font-face{
     font-family: "Open Sans";
-
     src:url("../fonts/OpenSans-Regular.ttf");
+}
+
+@font-face{
+    font-family: "Nexa-bold";
+    src:url("../fonts/Nexa-bold.otf")
+}
+
+@font-face{
+    font-family: Montserrat-medium;
+    src: url(../fonts/Montserrat-Medium.ttf);
 }
 
 .container{
@@ -68,14 +77,91 @@
 .work-time-bottom-text{
     font-weight: 400;
 }
-
-
-
-
-.cutaway{
-    grid-area: cutaway;
+.header-nav{
+    float: left;
+}
+.header-nav ul li{
+    list-style-type: none;
+    display: inline-block; 
+    padding: 30px 0;
+}
+.header-nav ul li:not(:first-child){
+    padding-left: 25px;
 }
 
+.header-nav ul li a{
+    font-family: "Nexa-bold";
+    font-size: 20px;
+    font-weight: 400;
+    color: #6c6c6c;
+    text-decoration: none;
+}
+.header-nav ul li a:hover{
+    color: #262626;
+}
+
+.header-links{
+    float: right;
+}
+.header-links ul li{
+    list-style-type: none;
+    display: inline-block; 
+    padding: 25px 0;
+}
+
+.header-links ul li:not(:first-child){
+    padding-left: 25px;
+}   
+.cutaway{
+    grid-area: cutaway;
+    background: url("../pics/cutaway-bg.jpg") no-repeat;
+    height: 640px ;
+    background-size: contain;
+}
+.cutaway-content{
+    padding: 140px 0 0 180px;
+    max-width: 550px;
+}
+.cutaway-header{
+    font-family: "Montserrat-medium";
+    font-size: 48px;
+    letter-spacing: -1.19px;
+    color: #474747;
+    text-align: center;
+}
+.cutaway-text{
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 30px;
+    color:#3f3f3f;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 55px;
+    max-width: 450px;
+}
+
+.cutaway-button-box{
+    padding: 25px 0 0 180px;
+}
+
+.cutaway-button{
+        background-color: #1a9bdc;;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-family: Lato;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.2);
+        border-radius: 35px;
+}        
 .pluses{
     grid-area: pluses ;
 }
