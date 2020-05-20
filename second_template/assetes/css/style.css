@@ -14,12 +14,17 @@
 }
 
 @font-face{
-    font-family: Montserrat-medium;
-    src: url(../fonts/Montserrat-Medium.ttf);
+    font-family: "Montserrat-medium";
+    src: url("../fonts/Montserrat-Medium.ttf");
+}
+
+@font-face{
+    font-family: "Montserrat-bold";
+    src: url("../fonts/Montserrat-Bold.ttf");
 }
 
 .container{
-    font-family: "Open Sans", "sans-serif";
+    font-family: "Open Sans", sans-serif;
     margin: 0 auto;
     max-width:1600px;
     display:grid;
@@ -90,7 +95,7 @@
 }
 
 .header-nav ul li a{
-    font-family: "Nexa-bold";
+    font-family: "Nexa-bold", sans-serif;
     font-size: 20px;
     font-weight: 400;
     color: #6c6c6c;
@@ -116,14 +121,14 @@
     grid-area: cutaway;
     background: url("../pics/cutaway-bg.jpg") no-repeat;
     height: 640px ;
-    background-size: contain;
+    background-size: cover;
 }
 .cutaway-content{
     padding: 140px 0 0 180px;
     max-width: 550px;
 }
 .cutaway-header{
-    font-family: "Montserrat-medium";
+    font-family: "Montserrat-medium", sans-serif;
     font-size: 48px;
     letter-spacing: -1.19px;
     color: #474747;
@@ -164,10 +169,149 @@
 }        
 .pluses{
     grid-area: pluses ;
+    display: grid;
+    height:360px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: #FFFFFF;
+}
+
+.pluses h3{
+    font-family: "Montserrat-bold", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    padding-top: 70px;
+    padding-bottom: 15px;
+}
+.pluses p{
+    padding: 0 50px;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+}
+.plus1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: no-repeat #43B1D2 url("../pics/stethoscope.png") 50% 20%;
+    
+}
+
+.plus2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: no-repeat #3fb6c6 url("../pics/phone-plus.png") 50% 20%;
+    
+}
+
+.plus3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: no-repeat #3cbbbb url("../pics/nurse.png") 50% 20%;
+    
+}
+
+.plus4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: no-repeat #37c3a8 url("../pics/ambulance.png") 50% 20%;
+    
 }
 
 .choose-us{
     grid-area: choose-us ;
+}
+
+.choose-us h2{
+    font-family: "Montserrat-bold";
+    font-weight: 700;
+    font-size: 45px;
+    text-align: center;
+    padding-top: 110px;
+    padding-bottom: 20px;
+}
+
+.choose-us p{
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+    max-width: 950px;
+    padding-left: 330px;
+}
+
+.professional{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:  repeat(2, 1fr);
+}
+
+.picture{
+    grid-column: 2 /  2;
+    grid-row:1/-1;
+    background: no-repeat url("../pics/doctor.png") center;
+    height: 598px;
+    
+}
+
+.professional div{
+    min-height: 170px;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #6a6a6a;
+}
+
+.professional h3{
+    padding-bottom: 40px;
+    font-family: "Montserrat-bold";
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-align: center;
+    color: #6f6f6e;
+}
+.professional p{
+    padding : 0 33px;
+    text-align: start;
+}
+
+.professional1{
+    background: no-repeat url("../pics/hygieia.png") 31% 43%;
+}
+
+.professional2{
+    background: no-repeat url("../pics/pills.png") 7% 43%;
+}
+
+.professional3{
+    background: no-repeat url("../pics/microscope.png") 31% 43%;
+}
+
+.professional4{
+    background: no-repeat url("../pics/atom.png") 7% 43%;
+}
+
+.professional-content{
+    padding-top: 115px;
+    padding-left: 105px;
+
+}
+
+.professional-content-even{
+    padding-top: 115px;
+    padding-right: 105px
+}
+
+.professional-content-even h3{
+    text-align: start;
+    padding-left: 110px;
 }
 
 .stats{
