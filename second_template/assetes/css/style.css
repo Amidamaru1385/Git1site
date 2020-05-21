@@ -228,91 +228,48 @@
     grid-area: choose-us ;
 }
 
-.choose-us h2{
-    font-family: "Montserrat-bold";
-    font-weight: 700;
+.choose-us-header{
+    padding-top: 80px;
+    text-align: center;
+    font-family: Montserrat-bold;
     font-size: 45px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.choose-us-header-text{
     text-align: center;
-    padding-top: 110px;
-    padding-bottom: 20px;
-}
-
-.choose-us p{
-    text-align: center;
-    font-size: 16px;
-    line-height: 30px;
-    font-weight: 400;
-    max-width: 950px;
-    padding-left: 330px;
-}
-
-.professional{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows:  repeat(2, 1fr);
-}
-
-.picture{
-    grid-column: 2 /  2;
-    grid-row:1/-1;
-    background: no-repeat url("../pics/doctor.png") center;
-    height: 598px;
-    
-}
-
-.professional div{
-    min-height: 170px;
+    padding-top: 20px;
+    max-width: 900px;
     font-size: 16px;
     line-height: 30px;
     font-weight: 400;
     color: #6a6a6a;
+    margin: 0 auto;
 }
 
-.professional h3{
-    padding-bottom: 40px;
-    font-family: "Montserrat-bold";
-    font-size: 30px;
-    line-height: 1.2;
-    font-weight: 700;
-    text-align: center;
-    color: #6f6f6e;
-}
-.professional p{
-    padding : 0 33px;
-    text-align: start;
+.advantage-1,
+.advantage-2,
+.advantage-3,
+.advantage-4{
+    grid-area: advantage;
 }
 
-.professional1{
-    background: no-repeat url("../pics/hygieia.png") 31% 43%;
+.advantage-pic{
+    grid-area: pic;
 }
 
-.professional2{
-    background: no-repeat url("../pics/pills.png") 7% 43%;
+.choose-us-advantages{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "advantage pic advantage"
+    "advantage pic advantage";
+    height: 600px;
 }
 
-.professional3{
-    background: no-repeat url("../pics/microscope.png") 31% 43%;
-}
 
-.professional4{
-    background: no-repeat url("../pics/atom.png") 7% 43%;
-}
-
-.professional-content{
-    padding-top: 115px;
-    padding-left: 105px;
-
-}
-
-.professional-content-even{
-    padding-top: 115px;
-    padding-right: 105px
-}
-
-.professional-content-even h3{
-    text-align: start;
-    padding-left: 110px;
-}
 
 .stats{
     grid-area: stats ;
