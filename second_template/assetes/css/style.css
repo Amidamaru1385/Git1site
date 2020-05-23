@@ -30,6 +30,15 @@
     display:grid;
     grid-template-areas: 
     "header-main"
+    "main"
+    "footer-main"
+    ;
+}
+
+main{
+    grid-area: main;
+    display:grid;
+    grid-template-areas: 
     "cutaway"
     "pluses"
     "choose-us"
@@ -38,7 +47,6 @@
     "gallery"
     "our-team"
     "new-patient"
-    "footer-main"
     ;
 }
 
@@ -70,6 +78,12 @@
     justify-content: center;
 }
 
+.fa{
+    transition-duration: 0.5s;
+}
+.fa:hover{
+    transform: scale(1.4);
+}
 .work-time-text{
     padding-left: 3px;
     font-size: 15px;
@@ -108,6 +122,9 @@
 .header-links{
     float: right;
 }
+
+
+
 .header-links ul li{
     list-style-type: none;
     display: inline-block; 
@@ -157,16 +174,30 @@
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;
         margin: 4px 2px;
         cursor: pointer;
-        font-family: Lato;
+        font-family: Lato, sans-serif;
         font-size: 18px;
         font-weight: 700;
         text-transform: uppercase;
         box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.2);
         border-radius: 35px;
-}        
+        animation: breathe 2s linear;
+        animation-iteration-count:infinite;
+        animation-direction: alternate-reverse; 
+
+
+}      
+
+.cutaway-button:focus{
+    outline: none;  
+}
+
+@keyframes breathe{
+    0%  {transform:scale(1.1)};
+    100%{transform:scale(1)};
+}
+
 .pluses{
     grid-area: pluses ;
     display: grid;
@@ -231,10 +262,11 @@
 .choose-us-header{
     padding-top: 80px;
     text-align: center;
-    font-family: Montserrat-bold;
+    font-family: Montserrat-bold, sans-serif;
     font-size: 45px;
     line-height: 1.2;
     font-weight: 700;
+    color: #494949;
 }
 
 .choose-us-header-text{
@@ -248,27 +280,52 @@
     margin: 0 auto;
 }
 
-.advantage-1,
-.advantage-2,
-.advantage-3,
-.advantage-4{
-    grid-area: advantage;
-}
-
-.advantage-pic{
-    grid-area: pic;
-}
-
-.choose-us-advantages{
+.choose-us-advantage{
+    justify-content: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "advantage pic advantage"
-    "advantage pic advantage";
-    height: 600px;
+    grid-template-columns: minmax(250px, 370px) 337px minmax(250px, 370px);
+    grid-column-gap: 40px;
+    grid-template-rows: minmax(150px, 301.5px) minmax(150px, 301.5px);
 }
 
+.choose-us-doctor{
+    grid-column: 2/3;
+    grid-row: 1/3
+}
+
+
+.advantage-1{
+    background: url("../pics/hygieia.png") no-repeat left center;
+}
+
+.advantage-2{
+    background: url("../pics/pills.png") no-repeat left center;
+}
+.advantage-3{
+    background: url("../pics/microscope.png") no-repeat left center;
+}
+.advantage-4{
+    background: url("../pics/atom.png") no-repeat left center;
+}
+
+.advantage h3{
+    padding-top: 135px;
+    padding-left: 90px;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: #6f6f6e;
+    font-family: Montserrat, sans-serif;
+}
+
+.advantage-text{
+    padding-top: 35px;
+    font-size: 16px;
+line-height: 30px;
+font-weight: 400;
+color: #6a6a6a;
+} 
 
 
 .stats{
