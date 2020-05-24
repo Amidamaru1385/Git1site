@@ -1,265 +1,388 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-@font-face{
+@font-face {
     font-family: "Open Sans";
-    src:url("../fonts/OpenSans-Regular.ttf");
+    src: url("../fonts/OpenSans-Regular.ttf");
 }
 
-@font-face{
+@font-face {
     font-family: "Nexa-bold";
-    src:url("../fonts/Nexa-bold.otf")
+    src: url("../fonts/Nexa-bold.otf")
 }
 
-@font-face{
+@font-face {
     font-family: "Montserrat-medium";
     src: url("../fonts/Montserrat-Medium.ttf");
 }
 
-@font-face{
+@font-face {
     font-family: "Montserrat-bold";
     src: url("../fonts/Montserrat-Bold.ttf");
 }
 
-.container{
+.container {
     font-family: "Open Sans", sans-serif;
     margin: 0 auto;
-    max-width:1600px;
-    display:grid;
-    grid-template-areas: 
-    "header-main"
-    "main"
-    "footer-main"
+    max-width: 1600px;
+    display: grid;
+    grid-template-areas:
+        "header-main"
+        "main"
+        "footer-main"
     ;
 }
 
-main{
+main {
     grid-area: main;
-    display:grid;
-    grid-template-areas: 
-    "cutaway"
-    "pluses"
-    "choose-us"
-    "stats"
-    "how-work"
-    "gallery"
-    "our-team"
-    "new-patient"
+    display: grid;
+    grid-template-areas:
+        "cutaway"
+        "pluses"
+        "choose-us"
+        "stats"
+        "how-work"
+        "gallery"
+        "our-team"
+        "new-patient"
     ;
 }
 
-.header-main{
+.header-main {
     grid-area: header-main;
-    display:grid;
-    padding: 2%  13%;
+    display: grid;
+    padding: 2% 13%;
 }
 
-.header-up{
-    display:grid;
+.header-up {
+    display: grid;
     border-bottom: 2px solid rgba(194, 194, 194, 0.31);
     padding-bottom: 10px;
     grid-template-columns: 30% 3fr 3fr 2fr;
 }
 
-.logo{
-    display:block;
+.logo {
+    display: block;
 }
 
-.fa-circle{
-    color:#1a9bdc;
+@media screen and (max-width:992px) {
+    .logo {
+        grid-column: 1/-1;
+        padding-bottom: 10px;
+    }
+}
+
+
+.circles img {
+    animation: breathe 2s linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes breathe {
+    0% {
+        transform: scale(1.1)
+    }
+
+    ;
+
+    100% {
+        transform: scale(1)
+    }
+
+    ;
 }
 
 .work-time,
 .mail-us,
-.call-us{
-    display:flex;
+.call-us {
+    display: flex;
     justify-content: center;
 }
 
-.fa{
+@media screen and (max-width:576px) {
+    .header-up {
+        display:block;
+    }
+    .work-time,
+    .mail-us,
+    .call-us {
+       display:flex;
+       justify-content: flex-start;
+       padding-top:15px;
+    }
+    .header-main{
+        padding:2% 2%;
+    }
+}
+
+
+.fa {
     transition-duration: 0.5s;
 }
-.fa:hover{
+
+.fa:hover {
     transform: scale(1.4);
 }
-.work-time-text{
+
+.work-time-text {
     padding-left: 3px;
     font-size: 15px;
     color: #6a6a6a;
     font-weight: 700;
     line-height: 22px;
-    padding-top: 9px;
+    padding-top: 3px;
 }
 
-.work-time-bottom-text{
+.work-time-bottom-text {
     font-weight: 400;
 }
-.header-nav{
+
+.header-nav {
     float: left;
 }
-.header-nav ul li{
+
+.header-nav ul li {
     list-style-type: none;
-    display: inline-block; 
+    display: inline-block;
     padding: 30px 0;
 }
-.header-nav ul li:not(:first-child){
+
+.header-nav ul li:not(:first-child) {
     padding-left: 25px;
 }
 
-.header-nav ul li a{
+@media screen and (max-width:576px) {
+    .header-nav ul li{
+        display: block;
+    }
+    .header-nav ul li:first-child{
+        padding-left: 25px;
+    }   
+}
+
+.header-nav ul li a {
     font-family: "Nexa-bold", sans-serif;
     font-size: 20px;
     font-weight: 400;
     color: #6c6c6c;
     text-decoration: none;
 }
-.header-nav ul li a:hover{
+
+
+.header-nav ul li a:hover {
     color: #262626;
 }
 
-.header-links{
+.header-links {
     float: right;
 }
 
 
 
-.header-links ul li{
+.header-links ul li {
     list-style-type: none;
-    display: inline-block; 
+    display: inline-block;
     padding: 25px 0;
 }
 
-.header-links ul li:not(:first-child){
+.header-links ul li:not(:first-child) {
     padding-left: 25px;
-}   
-.cutaway{
+}
+
+@media screen and (max-width:1044px) {
+
+    .header-links,
+    .header-nav {
+        float: none;
+    }
+
+}
+
+.cutaway {
     grid-area: cutaway;
     background: url("../pics/cutaway-bg.jpg") no-repeat;
-    height: 640px ;
+    height: 640px;
     background-size: cover;
 }
-.cutaway-content{
+
+
+
+.cutaway-content {
     padding: 140px 0 0 180px;
     max-width: 550px;
 }
-.cutaway-header{
+
+@media screen and (max-width:992px) {
+    .cutaway {
+        background: radial-gradient(circle, rgba(201, 210, 228, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(201, 210, 228, 1) 100%);
+    }
+
+    .cutaway-content {
+        padding-top: 200px;
+    }
+}
+
+.cutaway-header {
     font-family: "Montserrat-medium", sans-serif;
     font-size: 48px;
     letter-spacing: -1.19px;
     color: #474747;
     text-align: center;
 }
-.cutaway-text{
+
+.cutaway-text {
     font-size: 17px;
     font-weight: 400;
     line-height: 30px;
-    color:#3f3f3f;
+    color: #3f3f3f;
     text-align: center;
     padding-top: 20px;
     padding-left: 55px;
     max-width: 450px;
 }
 
-.cutaway-button-box{
+.cutaway-button-box {
     padding: 25px 0 0 180px;
 }
 
-.cutaway-button{
-        background-color: #1a9bdc;;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        margin: 4px 2px;
-        cursor: pointer;
-        font-family: Lato, sans-serif;
-        font-size: 18px;
-        font-weight: 700;
-        text-transform: uppercase;
-        box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.2);
-        border-radius: 35px;
-        animation: breathe 2s linear;
-        animation-iteration-count:infinite;
-        animation-direction: alternate-reverse; 
-
-
-}      
-
-.cutaway-button:focus{
-    outline: none;  
+.cutaway-button {
+    background-color: #1a9bdc;
+    ;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.2);
+    border-radius: 35px;
 }
 
-@keyframes breathe{
-    0%  {transform:scale(1.1)};
-    100%{transform:scale(1)};
+
+
+@media screen and (max-width:576px) {
+    .cutaway-content{
+        padding: 0;
+    }
+    .cutaway-header{
+        font-size:38px;
+    }
+    .cutaway-text{
+        padding-left: 20px;
+    }
+    .cutaway-button-box{
+        padding: 20px 0;
+        display:flex;
+        justify-content: center;
+    }
+    .cutaway{
+        height: auto;
+    }
 }
 
-.pluses{
-    grid-area: pluses ;
+.cutaway-button:focus {
+    outline: none;
+    animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@keyframes scale-out-center {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0);
+      opacity: 1;
+    }
+  }
+  
+
+.pluses {
+    grid-area: pluses;
     display: grid;
-    height:360px;
+    height: 360px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     color: #FFFFFF;
 }
 
-.pluses h3{
+@media screen and (max-width:992px) {
+    .pluses {
+        grid-template-columns: 1fr 1fr;
+        height: 1400px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .pluses{
+        grid-template-columns: 1fr;
+    }
+}
+
+.pluses h3 {
     font-family: "Montserrat-bold", sans-serif;
     font-size: 30px;
     font-weight: 700;
-    padding-top: 70px;
+    padding-top: 15px;
     padding-bottom: 15px;
 }
-.pluses p{
+
+.pluses p {
     padding: 0 50px;
     font-size: 16px;
     line-height: 30px;
     text-align: center;
 }
-.plus1{
+
+.plus1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: no-repeat #43B1D2 url("../pics/stethoscope.png") 50% 20%;
-    
+    background: #43B1D2;
+
 }
 
-.plus2{
+.plus2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: no-repeat #3fb6c6 url("../pics/phone-plus.png") 50% 20%;
-    
+    background: #3fb6c6;
+
 }
 
-.plus3{
+.plus3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: no-repeat #3cbbbb url("../pics/nurse.png") 50% 20%;
-    
+    background: #3cbbbb;
+
 }
 
-.plus4{
+.plus4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: no-repeat #37c3a8 url("../pics/ambulance.png") 50% 20%;
-    
+    background: #37c3a8;
+
 }
 
-.choose-us{
-    grid-area: choose-us ;
+.choose-us {
+    grid-area: choose-us;
 }
 
-.choose-us-header{
+.choose-us-header {
     padding-top: 80px;
     text-align: center;
     font-family: Montserrat-bold, sans-serif;
@@ -269,7 +392,7 @@ main{
     color: #494949;
 }
 
-.choose-us-header-text{
+.choose-us-header-text {
     text-align: center;
     padding-top: 20px;
     max-width: 900px;
@@ -280,7 +403,7 @@ main{
     margin: 0 auto;
 }
 
-.choose-us-advantage{
+.choose-us-advantage {
     justify-content: center;
     display: grid;
     grid-template-columns: minmax(250px, 370px) 337px minmax(250px, 370px);
@@ -288,27 +411,52 @@ main{
     grid-template-rows: minmax(150px, 301.5px) minmax(150px, 301.5px);
 }
 
-.choose-us-doctor{
+.choose-us-doctor {
     grid-column: 2/3;
     grid-row: 1/3
 }
 
+@media screen and (max-width:992px) {
+    .choose-us-advantage {
+        grid-template-columns: 1fr 1fr;
+    }
 
-.advantage-1{
+    .choose-us-doctor {
+        grid-column: 1/3;
+        grid-row: 3/5;
+        display:flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .choose-us-advantage{
+        grid-template-columns: 1fr;
+    }
+    .choose-us-doctor{
+        grid-column: 1/1;
+        grid-row: 5/6;
+        max-width: 300px;
+    }
+}
+
+.advantage-1 {
     background: url("../pics/hygieia.png") no-repeat left center;
 }
 
-.advantage-2{
+.advantage-2 {
     background: url("../pics/pills.png") no-repeat left center;
 }
-.advantage-3{
+
+.advantage-3 {
     background: url("../pics/microscope.png") no-repeat left center;
 }
-.advantage-4{
+
+.advantage-4 {
     background: url("../pics/atom.png") no-repeat left center;
 }
 
-.advantage h3{
+.advantage h3 {
     padding-top: 135px;
     padding-left: 90px;
     font-size: 30px;
@@ -319,35 +467,37 @@ main{
     font-family: Montserrat, sans-serif;
 }
 
-.advantage-text{
+
+
+.advantage-text {
     padding-top: 35px;
     font-size: 16px;
-line-height: 30px;
-font-weight: 400;
-color: #6a6a6a;
-} 
-
-
-.stats{
-    grid-area: stats ;
+    line-height: 30px;
+    font-weight: 400;
+    color: #6a6a6a;
 }
 
-.how-work{
-    grid-area: how-work ;
+
+.stats {
+    grid-area: stats;
 }
 
-.gallery{
-    grid-area: gallery ;
+.how-work {
+    grid-area: how-work;
 }
 
-.our-team{
-    grid-area: our-team ;
+.gallery {
+    grid-area: gallery;
 }
 
-.new-patient{
-    grid-area: new-patient ;
+.our-team {
+    grid-area: our-team;
 }
 
-.footer-main{
-    grid-area: footer-main ;
+.new-patient {
+    grid-area: new-patient;
+}
+
+.footer-main {
+    grid-area: footer-main;
 }
