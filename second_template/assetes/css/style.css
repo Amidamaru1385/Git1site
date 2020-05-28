@@ -120,7 +120,7 @@ main {
 
 
 .fa {
-    transition-duration: 0.5s;
+    transition-duration: 1s;
 }
 
 .fa:hover {
@@ -128,7 +128,7 @@ main {
 }
 
 .work-time-text {
-    padding-left: 3px;
+    padding-left: 8px;
     font-size: 15px;
     color: #6a6a6a;
     font-weight: 700;
@@ -479,7 +479,63 @@ main {
 
 
 .stats {
+    background: url("../pics/stats-bg.jpg") no-repeat;
+    height:592px;
     grid-area: stats;
+    background-size: cover;
+    margin:-5px;
+}
+
+.all-stats{
+    display:grid;
+    grid-template-columns: repeat(4, 180px);
+    justify-content: center;
+    padding-top: 170px;
+    column-gap: 140px;
+}
+
+.all-stats-count{
+    font-family: Montserrat-bold;
+    font-size: 60px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.all-stats-text{
+    font-family: Montserrat-medium;
+    font-size: 25px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.stats-pic{
+    padding-left: 40px;
+    padding-bottom: 25px;
+}
+
+.stats-border{
+    padding: 10px 0 25px 42px;
+}
+
+@media screen and (max-width:576px)
+{
+    .stats{
+        height: auto;
+        width: 100%;
+    }
+
+    .all-stats{
+        grid-template-columns: repeat(1,auto);
+        row-gap: 80px;
+    }
+
+    .stats-pic{
+        padding-left: 80px;
+    }
+    .stats-border{
+        padding-left: 88px;
+    }
+
 }
 
 .how-work {
