@@ -248,7 +248,7 @@ main {
     padding: 25px 0 0 180px;
 }
 
-.cutaway-button {
+.button {
     background-color: #1a9bdc;
     ;
     border: none;
@@ -289,7 +289,7 @@ main {
     }
 }
 
-.cutaway-button:focus {
+.button:focus {
     outline: none;
     animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
@@ -509,8 +509,14 @@ main {
 }
 
 .stats-pic{
-    padding-left: 40px;
+    padding-left: 45px;
     padding-bottom: 25px;
+}
+
+.stats-block{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .stats-border{
@@ -535,11 +541,168 @@ main {
     .stats-border{
         padding-left: 88px;
     }
-
+    .lung{
+        padding-bottom: 80px;
+    }
 }
 
 .how-work {
     grid-area: how-work;
+    display: grid;
+    grid-template-areas:
+    "w-head-1 w-head-1 w-head-2"
+    "w-text-1 w-text-1 w-text-2"
+    "w-article-1 w-article-2 w-treatment"
+    "w-button w-button w-treatment";
+    padding: 100px 200px;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.h-work-header-1{
+    grid-area: w-head-1;
+}
+
+.h-work-text-1{
+    grid-area: w-text-1;
+    max-width: 770px;
+}
+
+.h-work-header-2{
+    grid-area: w-head-2;
+}
+
+.h-work-text-2{
+    grid-area: w-text-2;
+}
+
+.h-work-article-1{
+    grid-area: w-article-1;
+}
+
+.h-work-article-2{
+    grid-area: w-article-2;
+}
+
+.h-work-treatment{
+    grid-area: w-treatment;
+}
+
+.h-work-button{
+    grid-area: w-button;
+}
+
+.work-header{
+    font-family: Montserrat-bold, sans-serif;
+    font-size: 45px;
+    color: #494949;
+}
+
+.work-text{
+    font-size: 16px;
+    color: #6a6a6a;
+    line-height: 30px;
+}
+
+.work-article{
+    max-width: 334px;
+}
+
+.article-header{
+    font-family: Montserrat-medium, sans-serif;
+    font-size: 20px;
+    color: #6f6f6e;
+    padding: 10px 0 5px 0;
+}
+
+.article-link{
+    padding-bottom: 15px;
+}
+
+.article-link a{
+    text-decoration: none;
+   
+    color: #0087be;
+    font-family: Montserrat-medium, sans-serif;
+    font-size: 15px;
+}
+
+.checkbox{
+    position: relative;
+    display:block;
+}
+
+.treatment-label{
+    cursor: pointer;
+    font-family: Montserrat-medium;
+    font-size: 20px;
+    color: #494949;
+    padding-left: 5px;
+}
+.hidden-text {
+    display: block;
+    overflow: hidden;
+    max-height: 0px;
+    opacity: 0;
+    transition: opacity .3s 0s;
+    font-size: 16px;
+    line-height: 30px;
+    color: #6a6a6a;
+    padding-bottom: 20px;
+}
+
+.treatment-check {
+    position: absolute;
+    width: 0px; height: 0px;
+    top: -20зx; left: -20px;
+}
+
+.treatment-check:checked + .hidden-text {
+    max-height: none;
+    opacity: 1;
+}
+
+.label-box{
+    display: flex;
+    align-items: center;
+    background-color: #e2e2e2;
+    padding: 5px 7px;
+    border-radius: 30px;
+}
+
+.h-work-button-box{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+@media screen and (max-width:768px){
+    .how-work{
+        grid-template-areas: 
+        "w-head-1 w-head-1"
+        "w-text-1 w-text-1"
+        "w-article-1 w-article-2"
+        "w-button w-button"
+        "w-head-2 w-treatment"
+        "w-text-2 w-treatment";
+    }
+    .h-work-button-box{
+        padding-bottom: 40px;
+    }
+}
+
+@media screen and (max-width:576px){
+    .how-work{
+        grid-template-areas: 
+        "w-head-1"
+        "w-text-1"
+        "w-article-1"
+        "w-article-2"
+        "w-button"
+        "w-head-2"
+        "w-text-2"
+        "w-treatment";
+    }
 }
 
 .gallery {
