@@ -112,6 +112,7 @@ main {
        display:flex;
        justify-content: flex-start;
        padding-top:15px;
+       
     }
     .header-main{
         padding:2% 2%;
@@ -154,14 +155,6 @@ main {
     padding-left: 25px;
 }
 
-@media screen and (max-width:576px) {
-    .header-nav ul li{
-        display: block;
-    }
-    .header-nav ul li:first-child{
-        padding-left: 25px;
-    }   
-}
 
 .header-nav ul li a {
     font-family: "Nexa-bold", sans-serif;
@@ -191,6 +184,25 @@ main {
 .header-links ul li:not(:first-child) {
     padding-left: 25px;
 }
+
+@media screen and (max-width:576px) {
+    .header-nav ul li{
+        display: block;
+    }
+
+    .header-nav ul li a{
+        font-size: 28px;
+    }
+    .work-time-text{
+        line-height: 40px;
+        font-size: 28px;
+    }
+    .header-nav ul li:first-child{
+        padding-left: 25px;
+        
+    }   
+}
+
 
 @media screen and (max-width:1044px) {
 
@@ -272,18 +284,25 @@ main {
 @media screen and (max-width:576px) {
     .cutaway-content{
         padding: 0;
+        margin: auto;
     }
+
     .cutaway-header{
         font-size:38px;
+        line-height: 50px;
     }
+
     .cutaway-text{
-        padding-left: 20px;
+        font-size: 28px;
+        line-height: 50px;
     }
+
     .cutaway-button-box{
         padding: 20px 0;
         display:flex;
         justify-content: center;
     }
+
     .cutaway{
         height: auto;
     }
@@ -314,18 +333,7 @@ main {
     color: #FFFFFF;
 }
 
-@media screen and (max-width:992px) {
-    .pluses {
-        grid-template-columns: 1fr 1fr;
-        height: 1400px;
-    }
-}
 
-@media screen and (max-width:576px) {
-    .pluses{
-        grid-template-columns: 1fr;
-    }
-}
 
 .pluses h3 {
     font-family: "Montserrat-bold", sans-serif;
@@ -341,41 +349,43 @@ main {
     line-height: 30px;
     text-align: center;
 }
-
-.plus1 {
+.plus{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.plus1 {
     background: #43B1D2;
-
 }
 
 .plus2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background: #3fb6c6;
-
 }
 
 .plus3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background: #3cbbbb;
-
 }
 
 .plus4 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background: #37c3a8;
+}
 
+@media screen and (max-width:992px) {
+    .pluses {
+        grid-template-columns: 1fr 1fr;
+        height: 1400px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .pluses{
+        grid-template-columns: 1fr;
+    }
+    .plus p{
+        font-size: 28px;
+        line-height: 50px;
+    }
 }
 
 .choose-us {
@@ -416,29 +426,7 @@ main {
     grid-row: 1/3
 }
 
-@media screen and (max-width:992px) {
-    .choose-us-advantage {
-        grid-template-columns: 1fr 1fr;
-    }
 
-    .choose-us-doctor {
-        grid-column: 1/3;
-        grid-row: 3/5;
-        display:flex;
-        justify-content: center;
-    }
-}
-
-@media screen and (max-width:576px) {
-    .choose-us-advantage{
-        grid-template-columns: 1fr;
-    }
-    .choose-us-doctor{
-        grid-column: 1/1;
-        grid-row: 5/6;
-        max-width: 300px;
-    }
-}
 
 .advantage-1 {
     background: url("../pics/hygieia.png") no-repeat left center;
@@ -475,6 +463,50 @@ main {
     line-height: 30px;
     font-weight: 400;
     color: #6a6a6a;
+}
+
+@media screen and (max-width:992px) {
+    .choose-us-advantage {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .choose-us-doctor {
+        grid-column: 1/3;
+        grid-row: 3/5;
+        display:flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .choose-us-advantage{
+        grid-template-columns: 1fr;
+    }
+
+    .choose-us-doctor{
+        grid-column: 1/1;
+        grid-row: 5/6;
+    
+    }
+
+    .advantage{
+        margin: auto ;
+    }
+
+    .advantage h3{
+        margin-bottom: 50px;
+    }
+
+    .advantage-text{
+        font-size: 28px;
+        max-width: 750px;
+        line-height: 50px;
+    }
+
+    .choose-us-header-text {
+        font-size: 28px;
+        line-height: 50px;
+    }
 }
 
 
@@ -645,9 +677,6 @@ main {
     max-height: 0px;
     opacity: 0;
     transition: opacity .3s 0s;
-    font-size: 16px;
-    line-height: 30px;
-    color: #6a6a6a;
     padding-bottom: 20px;
 }
 
@@ -703,18 +732,195 @@ main {
         "w-text-2"
         "w-treatment";
     }
+
+    .article-header,
+    .article-link a,
+    .work-text{
+        font-size:28px;
+        line-height: 50px;
+    }
+
+    .work-article{
+        max-width: none;
+    }
+    .h-work-treatment{
+        padding-top: 50px;
+    }
 }
 
 .gallery {
     grid-area: gallery;
+    background: url(../pics/gallery-bg.jpg) no-repeat;
+    max-height: 826px;
 }
 
+.gallery-header{
+    text-align: center;
+    color: #fff;
+    font-family: Montserrat-bold;
+    font-size: 45px;
+    padding-top: 80px;
+}
+
+.gallery-text{
+    text-align: center;
+    max-width: 1116px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 30px;
+    color: #ffffff;
+    padding-top: 25px;
+}
+
+.gallery-pics{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr , 2fr;
+    padding: 40px 250px 80px 250px;
+    row-gap: 30px;
+}
+
+@media screen and (max-width:768px){
+    .gallery-pics{
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 35px;
+
+    }
+    .gallery{
+        max-height: none;
+        background-size: cover;
+    }
+    
+}
+
+@media screen and (max-width:576px){
+    .gallery-pics{
+        display: block;
+    }
+    
+    .gallery-pic{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 35px;
+    }
+
+    .gallery-pic img{
+        width:650px;
+    }
+
+    .gallery-text{
+        font-size: 28px;
+        line-height: 50px;
+    }
+
+
+}
 .our-team {
     grid-area: our-team;
 }
 
+.our-team-header{
+    color: #494949;
+    text-align: center;
+    font-family: Montserrat-bold;
+    font-size: 45px;
+    padding-top: 100px;
+}
+
+.our-team-text{
+    color: #6a6a6a;
+    text-align: center;
+    max-width: 1116px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 30px;  
+    padding-top: 25px;
+}
+
+.our-team-div{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 40px 220px 120px 220px;
+}
+
+.member-name{
+    font-family: Montserrat-medium;
+    font-size: 25px;
+    color: #6f6f6e;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.member-position{
+    font-family: Montserrat-medium;
+    font-size: 18px;
+    color: #6f6f6e;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.member-links{
+    padding-left: 90px;
+    padding-top: 20px;
+    
+}
+
+.member-link{
+    color:#0087be;
+    padding-right: 20px;
+}
+
+.our-team-member:not(:last-child){
+    padding-right: 20px;
+}
+
+@media screen and (max-width:768px){
+    .our-team-div{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width:576px){
+    .our-team-div{
+        grid-template-columns: 1fr;
+        grid-row-gap: 80px;
+    }
+    .our-team-member img{
+       padding-left: 200px;
+    }
+    .member-links{
+        padding-left: 280px
+    }
+    .our-team-text{
+        font-size: 28px;
+        line-height: 50px;
+    }
+}
+
+
 .new-patient {
     grid-area: new-patient;
+    height: 176px;
+    background-color: #e2e2e2;
+    
+}
+
+.new-patient-text {
+    font-family: Montserrat-bold;
+    font-size: 30px;
+    color: #494949;
+}
+
+.new-patient-box{
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.new-patient-button{
+    margin-top: -10px;
+    margin-left: 60px;
 }
 
 .footer-main {
