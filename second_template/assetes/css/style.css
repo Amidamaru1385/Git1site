@@ -120,11 +120,11 @@ main {
 }
 
 
-.fa {
+.media-icon {
     transition-duration: 1s;
 }
 
-.fa:hover {
+.media-icon:hover {
     transform: scale(1.4);
 }
 
@@ -262,7 +262,6 @@ main {
 
 .button {
     background-color: #1a9bdc;
-    ;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -277,6 +276,7 @@ main {
     text-transform: uppercase;
     box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.2);
     border-radius: 35px;
+    outline: none;
 }
 
 
@@ -308,7 +308,7 @@ main {
     }
 }
 
-.button:focus {
+.button-off:focus {
     outline: none;
     animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
@@ -925,4 +925,119 @@ main {
 
 .footer-main {
     grid-area: footer-main;
+}
+
+.footer-main-up{
+    background-color: #171717;
+    display:grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    padding: 80px 160px;
+    column-gap: 40px;
+}
+
+.footer-main-header{
+    font-size: 22px;
+    color: #ffffff;
+    padding-bottom: 30px;
+}
+
+.footer-main-text{
+    font-size: 17px;
+    padding-left: 50px;
+    color: #8b8b8b;
+}
+
+.in-touch-box{
+    display:flex;
+    padding-top: 40px;
+}
+
+.footer-links-text{
+    padding-top: 13px;
+    padding-left: 13px;
+}
+
+.footer-links-about-us{
+    padding-top: 35px;
+}
+
+.footer-links-text a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #8b8b8b;
+    padding-left: 15px;
+}
+
+.fa-caret-right{
+    color:#0180b4;
+}
+
+.footer-input{
+    background-color: #171717;
+    border: none;
+    color: #7c7c7c;
+    font-size: 16px;
+    border-bottom: 1px solid #5d5d5d;
+    padding-bottom: 12px;
+    outline: none;
+}
+
+.footer-input-box{
+    padding-top: 25px;
+}
+
+.footer-input-area{
+    resize: none;
+}
+
+.button-short{
+    padding: 7px 26px;
+    font-size: 13.8px;
+}
+
+.footer-button{
+    padding-top: 8px;
+}
+
+.footer-icon{
+    padding-right: 18px;
+    padding-top: 20px;
+    color:#fff;
+}
+
+.footer-main-down{
+    background-color: #1a1a1a;
+    height:116px;
+}
+
+.footer-down-text{
+    color: #615555;
+    text-align: center;
+    padding-top: 45px;
+    font-size: 13px;
+}
+
+@media screen and (max-width:576px){
+    .footer-main-up{
+        grid-template-columns: 1fr;
+        padding-left: 400px;
+        row-gap: 90px;
+        
+    }
+
+    .footer-main-text{
+        font-size: 28px;
+    }
+
+    .footer-links-text a{
+        font-size: 28px;
+    }
+
+    .footer-down-text{
+        font-size: 28px;
+    }
+    
+    .footer-input{
+        font-size: 28px;
+    }
 }
